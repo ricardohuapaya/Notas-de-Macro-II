@@ -1,0 +1,411 @@
+\mainsection{4}{Modelo IS-LM ampliado por expectativas}{9/6/2021}
+
+\section{Modelo IS-LM Ampliado a expectativas}
+Queremos comparar flujos de gasto e ingresos a lo largo del tiempo, por eso podemos establecer la definición del valor presente.
+
+La tasa de interés $i_{t}$ es la clave para comparar flujos de dinero en el tiempo; para llevar al futuro \textbf{multiplicamos} por $(1+i_{t})$, para llevar al presente dividimos entre $(1+i_{t})$. 
+
+Este razonamiento aplica para más periodos, sean $\{z_{t}\}^{\infty}_{t=0}$ y $\{i_{t}\}^{\infty}_{t=0}$ secuencias de pagos y tasas de interés. El valor presente en el periodo inicial es $V(0)$, así entonces el flujo de pagos es
+
+\begin{align}
+    V(0)&= z_{0}+z_{1}\frac{1}{(1+i_{0})}+z_{2}\frac{1}{(1+i_{0})(1+i_{1})} +\dots \\
+    &= z_{0}+\sum_{t=1}^{\infty} z_{t}\frac{1}{\prod_{\tau=0}^{t-1}(1+i_{\tau})}
+\end{align}
+\myequations{Valor Presente }
+
+Cuando existe incertidumbre, se usan los valores esperando de (4.2),
+
+\begin{equation}
+    V(0)= z_{0}+\sum_{t=1}^{\infty}E \left[ z_{t}\frac{1}{\prod_{\tau=0}^{t-1}(1+i_{\tau})} \right]
+\end{equation}
+
+Por convención planteamos que $E[i_{0}]=i_{0}$.
+
+\begin{remark}
+Entre más alto sean los valores de la secuencia $\{z_{t}\}^{\infty}_{t=0}$, mayor será su valor presente; entre más alta sean las tasas de interés $\{i_{t}\}^{\infty}_{t=0}$, menor será su valor presente.
+\end{remark}
+
+Así se podemos plantear diversas variaciones de representación de (4.2):
+
+\textbf{Valor presente con tasa de interés constante}
+
+\begin{equation}
+    V(0)=\sum_{t=0}^{\infty} z_{t}\frac{1}{(1+i)^{t}}
+\end{equation}
+
+\textbf{Valor presente con flujos de pago constante}
+
+\begin{equation}
+    V(0)=z\left[1+ \sum_{t=0}^{\infty} z_{t}\frac{1}{\prod_{\tau=0}^{t-1}(1+i_{\tau})}\right]
+\end{equation}
+
+\textbf{Valor presente con tasa de interés y flujos de pago constante}
+\begin{align}
+        V(0)&=z\left[\sum_{t=0}^{\infty} \frac{1}{(1+i)^{t}}\right]
+\end{align}
+
+Podemos plantear una serie de pagos infinita, por así decirlo podemos calcular el valor presente: 
+\begin{equation}
+    V(0)=z\left[1-\left(\frac{1}{1+i}\right)^{T+1} \right]\left(\frac{1+i}{i}\right)
+\end{equation}
+
+Tasas de interés y flujos de pago constante, supongamos que la tasa de interés es eléctricamente positiva, por lo tanto:$\frac{1}{1+i} < 1$
+El valor presente de esta serie infinita es:
+\begin{align}
+    V(0) &= \underset{T \to \infty}{lim} z \left[1-\left(\frac{1}{1+i}\right)^{T+1}\right]\left(\frac{1+i}{i}\right)  \\
+    &= z \left(\frac{1+i}{i}\right) 
+\end{align}
+
+\textbf{Valor presente descontando por flujos reales}
+\begin{equation}
+    \V(0)=\z_{0}+ \sum^{\infty}_{t=1} \z_{t}\frac{1}{\prod_{\tau =0}^{t-1}(1+r_{\tau})}
+\end{equation}
+
+Donde podemos definir: 
+
+\begin{equation}
+    \begin{cases}
+    \V(0) & \textup{ representa el valor real descontado}\\
+    \z_{t} & \textup{ es el pago real}\\
+    r_{t} & \textup{ es la tasa de interés real}
+    \end{cases}
+\end{equation}
+
+\subsection{Bonos y ahorros}
+
+Los bonos son un instrumento de ahorro que se diferencia en dos aspectos básicos, el \textbf{plazo} y el \textbf{riesgo.} Ambos son determinantes de la tasa de interés, así si nos centramos en el plazo. 
+
+\begin{itemize}
+    \item \textit{Corto Plazo} si abarcon plazo menores o iguales a un año.
+    \item \textit{Largo Plazo} si abarcan plazo mayores a un año.
+\end{itemize}
+
+\textbf{Vocabulario de los mercado de bonos}
+
+Los bonos son emitidos por el estado o por empresas de forma se pueden clasificar de la forma: 
+
+\begin{itemize}
+    \item \textit{Basura:} son bonos con alto riesgo de impago. 
+    \item \textit{Cero cupón:} son bonos que hacen un único pago al vencimiento.
+    \item \textit{Con cupón:} hacen pagos antes del vencimiento.
+    \item \textit{Bonos indexados:} prometen pagos ajustados por inflación.
+\end{itemize}
+
+\textbf{Vocabulario de las tasas de interés}
+
+Las tasas de crecimiento pueden se expresadas como \textbf{porcentajes}, las tasas de crecimiento tienen asociados \textbf{factores de crecimiento.} Los cambios en tasas de interés se deben expresar en \textbf{puntos porcentuales} o \textbf{ puntos bases.}
+
+\textbf{El precio de los bonos}
+
+El precio de un bono refleja su valor actual, podemos analizar dos bonos para comprender su funcionamiento, un bono pagas 1 dentro de un año y el otro paga 1 en dos años. Los precios respectivos es $P_{1,1t}$ y $P_{1,2t}$, estos precios reflejan el \textbf{valor presente} de ambos.
+
+\begin{align*}
+    P_{1,1t} &= \frac{1}{1+i_{t,1t}} & P_{1,2t} &=\frac{1}{(1+i_{t,2t})^{2}}
+\end{align*}
+
+En este contesto las tasas para cada bono están \textbf{anualizadas.}
+
+\textbf{Opción 1:} comprar y dejar vencer el bono a un año, encotnces:
+\begin{enumerate}
+    \item Compra $\frac{1}{P_{t,1t}}$ bono hoy
+    \item Recibe 1 por cada bono en un año
+    \item Colones obtenidos $\frac{1}{P_{t,1t}}$
+\end{enumerate}
+
+$$1+i_{t,1t}=\frac{1}{P_{1,1t}}$$
+
+\textbf{Opción 2:} comprar el bono a dos año, y luego lo vendo:
+\begin{enumerate}
+    \item Compra $\frac{1}{P_{t,2t}}$ bono hoy
+    \item Vende a $P_{t+1,1t}^{e}$ por cada bono en un año
+    \item Colones obtenidos $\frac{P_{t+1,1t}^{e}}{\frac{1}{P_{1,2t}}}$
+\end{enumerate}
+
+El rendimiento de la operación debe ser:
+
+$$1+i_{t,1t}=\frac{P_{t+1,1t}^{e}}{P_{t,2t}}$$
+
+\textbf{Opción 3:} comprar y dejar vencer el bono a dos años, encotnces:
+\begin{enumerate}
+    \item Compra $\frac{1}{P_{1,2t}}$ bono hoy
+    \item Recibe 1 por cada bono en un año
+    \item Colones obtenidos $\frac{1}{P_{t,2t}}$
+\end{enumerate}
+
+El rendimiento se obtiene 
+$$(1+i_{t,1t})^{2}=\frac{1}{P_{t,2t}}$$
+
+\textbf{Opción 4:} comprar y dejar vencer el bono a dos años, encotnces:
+\begin{enumerate}
+    \item Compra $\frac{1}{P_{t,1t}}$ bono hoy
+    \item Recibe 1 por cada bono en un año
+    \item Ahorra $\frac{1}{P_{t,1t}}$ en bonos a un año que cuestan $\frac{1}{P_{t+1,1t}^{e}}$ en un año
+    \item Colones obtenidos $\frac{1}{P_{1,1t}P_{t+1,1t}^{e}}$
+\end{enumerate}
+
+El rendimiento se obtiene 
+$$(1+i^{e}_{t+1,1t})(1+i_{t,1t})=\frac{1}{P_{t,1t}P_{t+1,1t}^{e}}$$
+
+Ambas opciones deberían ser igual de libres de riesgo
+
+\begin{align}
+    (1+i_{t,1t})^{2} =& (1+i^{e}_{t+1,1t})(1+i_{t,1t})\\
+    \implies (1+i_{t,nt})^{n}  =& \prod_{\eta=0}^{n-1} (1+i^{e}_{t+\eta,1t})
+\end{align}
+
+Vemos que se puede aproximar usando promedios simples y las propmiedades de logaritmos.
+
+\begin{equation}
+    i_{t, nt} \approx \frac{1}{n} \sum^{n-1}_{\eta=0}i^{e}_{t+\eta,1t}
+\end{equation}
+
+Sea el caso realista que existe riesgo $x$, entonces vemos que
+\begin{equation}
+    1+i^{e}_{t+1,1t}+x =\frac{P_{t+2,1t}^{e}}{P_{t+1,2t}^{e}}
+\end{equation}
+
+A un periodo no sea paga la prima, pues el bono tendría un rendimiento fijo. Por ello debemos condicionar (4.12)
+
+\begin{equation}
+    (1+i_{t,1t})^{2} = (1+i^{e}_{t+1,1t}+x)(1+i_{t,1t})
+\end{equation}
+
+Esto afecta la aproximación hecha de igual manera. 
+
+\begin{equation}
+        i_{t, nt} \approx \frac{1}{n} \sum^{n-1}_{\eta=0}(i^{e}_{t+\eta,1t} + x_{\eta})
+\end{equation}
+
+\textbf{Pendiente Positiva:}
+A mayor plazo mayor riesgo, espera mayores tasas de interés.
+
+\textbf{Pendiente Negativa}
+El mercado espera tasas más bajas en el futuro, es asociado con recesiones. 
+
+\subsection{Financiamiento de las Empresas}
+
+Una empresa puede financiarse por diferentes medios, entre tanto estan por:
+\begin{itemize}
+    \item Financiamiento Interno
+    \item Financimeinto Externo
+    \item Deuda: emisión de bonos
+    \item Acciones: emisión de acciones
+\end{itemize}
+
+Los accionistas son dueños de la empresa, da derecho a los dividendos de la empresa. 
+
+Si una acción da derecho a recibir dividendos futuros, su precio está directamente relacionado con estos flujos. 
+
+Denotemos: 
+
+\begin{itemize}
+    \item $Q_{t}$ es el precio de una acción en $t$
+    \item $D_{t}$ es el precio que esa empresa paga en $t$
+\end{itemize}
+
+Estamos valorando las acciones \textbf{ex-dividendo}, es decir después del pago de dividendos. 
+
+Por lo que el rendimiento es
+\begin{equation}
+    \frac{D^{e}_{t+1}+Q^{e}_{t+1}}{Q_{t}}
+\end{equation}
+
+Note que un ahorrante puede comprar un bono igual de riesgoso
+
+\begin{align}
+    &1+i_{t,1t}+x \\
+    \frac{D^{e}_{t+1}+Q^{e}_{t+1}}{Q_{t}} &=1+i_{t,1t}+x \\
+    Q_{t} & = \frac{D^{e}_{t+1}+Q^{e}_{t+1}}{1+i_{t,1t}+x}
+\end{align}
+
+La expresión (4.21) esta en su forma recursiva. Expresa el precio de \textbf{hoy} en función del de mañana iterando la expresión.
+
+\begin{equation}
+    Q_{t} =\sum_{\tau = 1}^{\infty}\frac{D^{e}_{t+\tau}}{\prod^{\tau-1}_{k=0}(1+i_{t+k,1t}+x)}
+\end{equation}
+
+\subsection{Politica Monetario}
+
+Las reacciones a politica dependen de si es sorpresiva, suponga que estamos en una recesión; es común que este escenario el banco central disminuye las tasas de interés. Esto implica un movimiento hacia abajo en la curva LM.
+
+Considere que los mercados bursatiles esperaban esa reacción, no hay cambios en los precios. Si no lo esperaban si hay una reacción. Esto se nota que si hay una disminución de la curva de LM eso se ve como una curva IS estatica. 
+
+\textbf{Un aumento inesperado}
+
+Suponga que la confianza de los consumidores aumenta inesperadamente, esto desplazaría la curva IS hacia la derecha.
+
+\begin{itemize}
+    \item Aumento en consumo $\implies$ aumento en ganancias
+    \item Aumento en ganancias $\implies$ aumento en dividendos
+    \item Aumento en dividendos $\implies$ aumento en el precio de acciones
+\end{itemize}
+
+En un marco de acción del banco central, se espera una reacción contra-cíclica es efecto podría atenuar. Si no la espera no puede entrar en el juego y sí se llegaría aumentar los precios de las acciones. 
+
+La valoración de las acciones depende también de dos factores: 
+
+\begin{enumerate}
+    \item Variaciones en el tiempo en la percepciones de riesgo
+    \item Desviaciones de su valor fundamental por modas o burbujas
+\end{enumerate}
+
+En el caso de las variaciones en el riesgo $x$, ya que en (4.22) supusimos que el riesgo es constante. Pero como vemos en la vida real no es así. La prima por riesgo en momento como post \textit{Gran Depresión} o la \textit{Gran Recesión} no es la misma que en momento regular de la economía. 
+
+El valor fundamental de una acción es el valor presente de flujo de dividendos esperado. Los precios no siempre reflejan esa valoración; dichas desviaciones puede ser completamente racionales. Una acción puede pagar absolutamente nada y ser valorada positivamente. 
+
+\section{Consumo Aumentados por Expectativas}
+
+Habíamos supuesto que el consumo depende del ingreso disponible de hoy, la visión prospectiva tiene un rol muy importante en las decisiones intertemporales. La hipótesis del ingreso permanente dice que el hogar considera más que al ingreso de hoy.  
+
+Los consumidores previsores planean a futuro, pues así considere un consumidor prevenido. En este caso sería una decisión temporal en la cual balancean \textbf{cuando} y \textbf{cuanto} consumen. Así se hace una radiografía de su riqueza entonces sabe hacer su estimación. \textbf{Riqueza financiera} \& \textbf{Riqueza Humana}.
+
+Con el estimado se decide cuanto consumir
+
+\begin{equation}
+    C_{t} = C(VPR_{t})
+\end{equation}
+\myequations{Función de Consumo con expectativas precavidas}
+
+\begin{remark}
+Una regla de consumo común es la repartición igualitaria de la riqueza en la vida.
+\begin{equation}
+    C_{t} = \frac{VPR_{t}}{T-t}
+\end{equation}
+\end{remark}
+
+Aun así no puede ser lo óptimo, pues lo patrones de consumo pueden cambiar a lo largo del tiempo. Asi una mejor regla es incluir en ingreso disponible, 
+
+\begin{equation}
+    C_{t} = C(VPR_{t}, y_{D,T})
+\end{equation}
+
+Las expectativas a futuro afectan el consumo en dos dimensiones:
+\begin{itemize}
+    \item El calculo de la riqueza es prospectiva, de misma manera la riqueza financiera e inmobiliaria.
+\end{itemize}
+
+El consumo usualmente responde en menor cuantía que los cambios en el ingreso. El consumo sí puede aumentar sin cambios en el ingreso disponible de hoy. 
+
+Por parte de los consumidores y  tambien la empresas tienen una visión prospectiva muy importante. La decisión de inversión se hace con miras al futuro. De esta forma la valoración se toma en cuenta. 
+
+\textbf{El capital se deprecia:}
+
+La vida útil de una máquina es parte indispensable de los cálculos a futuro, conforme pase el tiempo aumentan los costos de manutención. Por ello cada año el capital pierde una proporción $\delta$ de su utilidad. 
+
+Por lo tanto el valor presente de los beneficios en $t+1$ es 
+\begin{equation}
+    \frac{1}{1+r_{t}} \Pi^{e}_{t+1}
+\end{equation}
+
+En $t+2$
+\begin{equation}
+    \frac{1}{(1+r_{t})(1+r^{e}_{t})}(1-\delta) \Pi^{e}_{t+2}
+\end{equation}
+
+
+Por lo que el flujo de ganancias netas es:
+
+\begin{equation}
+    V_{t}= \sum^{\infty}_{\tau = 0}\frac{1}{\prod^{\tau}_{i=0}(1+r^{e}_{t+i})}(1-\delta)^{\tau}\Pi^{e}_{t+1+\tau}
+\end{equation}
+
+La decisión de invertir conlleva un análisis costo-beneficio, el costo de capital es igual a 1. 
+\begin{equation}
+    \begin{cases}
+    V>1 & \textup{ Es rentable invertir en la unidad} \\
+    V=1 & \textup{ Es indiferente invertir en la unidad} \\
+    V<1 & \textup{ No es rentable} \\
+    \end{cases}
+\end{equation}
+
+Suponga que la ganancias esperadas son constantes $\Pi^{e}_{t}= \Pi$, al igual que las tasas de interes $r_{t}^{e}=r$.  En este caso:
+
+\begin{equation}
+    V_{t}=\frac{\Pi}{r+\delta}
+\end{equation}
+
+El costo de uso de capital refleja una condición de indiferencia para la empresas, ellas pueden pueden comprar el capital o alquilarlo. 
+
+Hay una relación del entre ganancias e inversión. 
+
+\begin{equation}
+    I_{t}=I(V_{t}, \Pi_{t})
+\end{equation}
+
+Las ganancias depende del nivel de la actividad economica, asi se establece la siguiente relación:
+
+\begin{equation}
+    \Pi_{t}=\Pi(\frac{Y_{t}}{K_{t}})
+\end{equation}
+
+Por lo que la producción actual aumenta las actuales.
+
+\section{Expectativas añadidas}
+
+Para capturar todas las expectativas, supondremos si solo hay dos periodos. El periodo de mañana caputra todo lo que pasará en el futuro.
+
+Definimos primero el gasto privado agregado:
+
+\begin{equation}
+    A(Y,T,r,x)=C(Y-T)+I(Y,r+x)
+\end{equation}
+
+Por lo que la relación IS se expresa de la forma
+
+\begin{equation}
+    Y= A(Y,T,r,x) +G
+\end{equation}
+
+Al incorporar las variables futuras, \textbf{asuma que la prima por riesgo es constante.}
+
+\begin{equation}
+        Y= A(Y,T,r,Y^{te},T^{te},r^{te}) +G
+\end{equation}
+
+La pendiente de la curva sigue siendo igual, de misma forma que obtener la sigue siendo la misma. Esto llega a a que al agregar todos los elementos la nueva curva se hace más inelástica con respecto a la tasa de interés del periodo actual.
+
+La Tasa de interés hoy, ahora afecta negativamente el consumo. Un aumento disminuye el factor de descuento; el valor presente de la riqueza baja. 
+
+\textbf{Contracción de Y}
+\begin{itemize}
+    \item $\Delta T >0$
+    \item $\Delta T^{e} >0$
+    \item $\Delta r^{e} >0 \to$ nos hace los proyectos de inversión menos rentables.
+\end{itemize}
+
+\textbf{Aumento de Y}
+\begin{itemize}
+    \item $\Delta G >0$
+    \item $\Delta G^{e} >0$
+    \item $\Delta Y^{'e} >0$
+    \item $\Delta r^{e} <0$
+\end{itemize}
+\begin{remark}(Las Variables Presentes Representan Menor Importancia)
+ Esto implica que la que la curva IS responden en menor cuantía.
+\end{remark}
+
+\textbf{Las relaciones IS-LM}
+
+\begin{align}
+    IS: & Y= A(Y,T,r,Y^{te},T^{te},r^{te}) +G\\ 
+    LM: & r = \overline{r}
+\end{align}
+
+Se requieren cambios grandes en la tasa de interés hoy para generar cambios moderados en la producción. Para tener mayor eficacia entonces: deben afectar las \textbf{expectativas.} 
+
+¿Qué son las expectivas racionales? 
+
+Es la formación de expectativas que incorporan toda la información relevante y disponible. En si existen dos formas de líder con estos conceptos. De forma \textbf{Exógena} como Keynes con los espíritus animales. O de forma \textbf{adaptativas} ajustan pronósticos de acuerdo a la diferencia de la expectativa y su realización.
+
+\begin{remark}
+ \textbf{Una reducción del déficit puede aumentar la producción}. Un aumento de impuesto o reducción de gasto disminuye la producción en el corto plazo. En el mediano plazo, el ahorro publico da paso a mayor inversión. Así dar paso a una mayor producción. 
+ 
+ Un problema del comentario previo es el efecto de corto plazo y la clave de dicho efecto de las expectativas.
+ 
+ Si toda la reducción del gasto se hace hoy, la producción hoy cae mucho. Si la reducción del gasto se hace mañana, la producción hoy no cae. La solución \textbf{no} es anunciar cortes de gasto infinitamente en el siguiente periodo. 
+\end{remark}
+
+
+
+
+

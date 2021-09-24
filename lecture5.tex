@@ -1,0 +1,153 @@
+\mainsection{5}{Consumo y ahorro}{9/16/2021}
+
+\section{Un Modelo Dinámico de Ahorro y Consumo}
+
+Considere un modelo que se basa en la economía dinámica y micro-fundada: 
+
+\textbf{Requisitos:}
+
+Estamos en un modelo de dos periodos; el \textbf{agente} es un consumidor representativo. Sabemos que no hay dinero ni incertidumbre. Por ahora se sabe que:
+
+\begin{itemize}
+    \item El consumidor vive en dos periodos.
+    \item El Ingreso es exógeno. $Y_{t}$ por hoy, y $Y_{t+1} $mañana.
+    \item El consumidor decide sus niveles de consumó $C_{t}$ y $C_{t+1}$ Puede ahorrar y pedir prestado a una tasa de interés real $r_{t}$
+\end{itemize}
+
+\begin{remark}
+Asuma por comodidad que todos los consumidores en la economía son idénticos. En este caso los consumidores deben tomar decisiones iguales.
+\end{remark}
+
+Las restricciones del consumidores se basan en la decisión de cuanto ahorrar y cuanto consumir. 
+
+\begin{equation}
+    C_{t}+S_{t} \leq Y_{t}
+\end{equation}
+
+Para el segundo periodo tenemos que: 
+
+\begin{equation}
+    C_{t+1}+S_{t+1} \leq Y_{t+1}+ (1+r_{t})S_{t}
+\end{equation}
+
+\textbf{Restricciones Presupuestarias de los consumidores:}
+
+Estamos siendo muy generales en la formulación de (5.1) y (5.2); podemos así simplificar las restricciones van de la mano con con saber que siempre se consume todo el ingreso y que no existe ahorro para $t+2$.
+
+\begin{align}
+    C_{t}+S_{t} = & Y_{t}\\
+    C_{t+1}=& Y_{t+1}+(1+r_{t})S_{t}
+\end{align}
+
+El ahorro enlaza en dos periodos donde vemos que: 
+
+$$S_{t}=\frac{C_{t+1}}{1+r_{t}}- \frac{Y_{t+1}}{1+r_{t}}$$
+
+Con ello podemos simplificar el modelo de la forma; 
+
+\begin{equation}
+    C_{t}+\frac{C_{t+1}}{1+r_{t}} = Y_{t}+ \frac{Y_{t+1}}{1+r_{t}}
+\end{equation}
+\myequations{Restriccion presupuestaria intertemporal}
+
+\textbf{Nos dice que el valor presente del flujo de gastos} debe ser igual al flujo de ingresos. 
+
+Asi se expresa graficamente, 
+\begin{equation}
+    C_{t+1} = Y_{t+1} + (1+r_{t})(Y_{t}-C_{t})
+\end{equation}
+\textbf{GRAFICO}
+\subsection{Curvas de Indiferencia y Derivadas}
+
+Las preferencias de utilidad son conformadas por el consumo de hoy/mañana y la impaciencia.
+
+\begin{equation}
+    U(C_{t},C_{t+1}) = u(C_{t})+\beta u(C_{t+1})
+\end{equation}
+
+En este caso $U(C_{t},C_{t+1})$ es la función de utilidad total; $u(C_{t})$ es la función de utilidad instantánea. Y luego $\beta$ es un factor de descuento como comparación. 
+
+\textbf{Las preferencias del consumidor del modelo Intertemporal:}
+
+La función de utilidad de el consumidor está conformada 
+
+Una tasa de descuento es diferente a un factor de descuento. Factor de descuento de utilidades $\beta = \frac{1}{1+\rho}$
+
+Note que en este caso las tasas de descuento $\neq$ a los factores de descuento, podemos ver el ejemplo de la forma:
+\begin{itemize}
+    \item Tasa de interés nominal: $i_{t}$ 
+    
+    Factor de descuento flujo nominal: $\frac{1}{1-i_{t}}$
+    
+    \item Tasa de interés real: $r_{t}$ 
+    
+    Factor de descuento flujo real: $\frac{1}{1-r_{t}}$
+    
+    \item Tasa de impaciencia: $\rho$ 
+    
+    Factor de descuento de utilidades:$\beta= \frac{1}{1-\rho}$
+\end{itemize}
+
+Ejemplo de funciones de utilidad instantánea
+
+Función Lineal
+\begin{equation}
+    u(C_{T}) = \theta C_{t}, \theta>0
+\end{equation}
+
+Función Cuadrática
+\begin{equation}
+    u(C_{T}) =C_{t}-\frac{\theta}{2}C^{2}_{t}, \theta>0
+\end{equation}
+
+Función Logarítmica
+\begin{equation}
+    u(C_{T}) =ln C_{t}
+\end{equation}
+
+Función Isoelastica
+\begin{equation}
+    u(C_{T}) =\frac{C_{t}^{1-\sigma}-1}{1-\sigma}, \sigma>0
+\end{equation}
+
+Los consumidores enfrentan el problema: 
+
+\begin{align}
+    \underset{C_{t}, C_{t+1}}{max} U(C_{t}, C_{t+1})&= u(C_{t})+ \beta u(C_{t+1})\\
+    \textup{sujeto a} &\nonumber\\
+    C_{t}+\frac{C_{t+1}}{1+r_{t}} &= Y_{t}+\frac{Y_{t+1}}{1+r_{t}}
+\end{align}
+
+Despejando la restricción podemos obtener nuevamente (5.6), en este caso nos queda el problema de optimización de la forma; primero tomando que: $U(C_{t}, (Y_{t+1} + (1+r_{t})(Y_{t}-C_{t}))) \equiv V(C_{t})$
+
+\begin{equation}
+    \underset{C_{t}}{\max{V(C_{T})}}  = u(C_{t})+\beta u(Y_{t+1} + (1+r_{t})(Y_{t}-C_{t}))
+\end{equation}
+
+Si lo solucionamos se requiere que la condición de primer orden sea: 
+
+\begin{align}
+    \frac{\partial U}{\partial C_{t}} &= 0 \\
+    & \implies u'(C_{t}) - \beta u'((1+r_{t})(Y_{t}-C_{t})+Y_{t+1})((1+r_{t}) = 0\\
+    & \implies  u'(C_{t}) = \beta u'((1+r_{t})(Y_{t}-C_{t})+Y_{t+1})((1+r_{t}) 
+\end{align}
+
+Podemos resolver el mismo problema con lagaréanos, así tenemos un problema de optimización restringido:
+\begin{equation}
+    \calL = u(C_{t})+\beta u(C_{t})+\lambda[Y_{t}+Y_{t+1}/(1+r_{t})-C_{t}-C_{t+1}/(1+r_{t})]
+\end{equation}
+Solucionamos, 
+
+\begin{align}
+    \frac{\partial \calL}{\partial C_{t}}  = 0 & \implies \beta u'(C_{t}) =\lambda\\
+    \frac{\partial \calL}{\partial C_{t+1}}  = 0 & \implies \beta u'(C_{t+1}) =\lambda/(1+r_{t}) \\
+    \frac{\partial \calL}{\partial \lambda}  = 0 & \implies  C_{t}+\frac{C_{t+1}}{1+r_{t}} = Y_{t}+\frac{Y_{t+1}}{1+r_{t}}
+\end{align}
+
+Combinando las dos primeras condiciones de primer orden, se tiene la ecuación de Euler
+
+\begin{equation}
+    u'(C_{t})=\beta(1+r_{t})u'(C_{t+1})
+\end{equation}
+
+Refleja lo que se debe cumplir, la decisión es sopesar qué hacer con la última unidad de ingreso. 
