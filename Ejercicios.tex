@@ -207,3 +207,106 @@ Es decir, la condición nos dice que, para que esta política tenga un efecto po
 
 $\blacksquare$
 \end{enumerate}
+
+\section{Modelo Consumo y Ahorro}
+
+
+\textbf{Ejercicio 1:}
+
+\begin{enumerate}[a)]
+    \item Garín \& Lester ejercicio 1: Explique porque $S_{t+1}=0$.
+    
+    Podemos asegurar de forma racional que $S_{t+1}=0$ al establecer y simplificar el margen de acción del consumidor representativo en la economía. Dicha condición, conocida como \textbf{condición terminal}, se cumple una vez se cumplan dos supuestos. El primero es que se asume que el consumidor representativo \textbf{no le gusta desperdiciar los recursos} y el segundo es que todos los agentes de la economía están consientes que existen solo dos periodos. Así entonces como el consumidor no le gusta desperdiciar los recursos y sabe que solo existen dos periodos entonces en $t+1$ el consumidor no quiere terminar con un $S_{t+1}>0$, puesto a que dicho ahorro no lo va a poder consumir. Así lo que el consumidor representativo idea es terminar su segundo y ultimo periodo con deuda y no ahorro; en este caso las entidad financieras además saben que este al ser el último periodo si un agente se endeuda no existe un periodo donde este pagué su deuda por lo no ceden a dar prestamos. Ante esta situaciones a los consumidores representativos solo les queda aceptar un  $S_{t+1}=0$.
+    
+    \item Garín \& Lester ejercicio 2: derive matemáticamente la restricción ínter temporal.
+    
+    Considere las restricciones para ambos periodos de la forma simplificada: 
+    
+    \begin{equation*}
+        \begin{cases}
+            C_{t}+S_{t}&=Y_{t}\\
+            C_{t+1}=Y{t+1}+(1+r_{t})S_{t}
+        \end{cases}
+    \end{equation*}
+    
+    Considere el termino común en ambos periodos siendo este el ahorro $S_{t}$ Así bien podemos despejarlo en el primer periodo donde este es:
+    
+    \begin{align*}
+        S_{t} & =Y_{t}-C_{t} \\
+        \textup{Inyectamos en periodo 2}&\\
+        C_{t+1}&= Y_{t+1}+(1+r_{t})(Y_{t}-C_{t})\\
+        C_{t+1}+(1+r_{t})C_{t}&= Y_{t+1}+(1+r_{t})Y_{t}\\
+        C_{t}+ \frac{ C_{t+1}}{(1+r_{t})} &= Y_{t}+\frac{ Y_{t+1}}{(1+r_{t})} 
+    \end{align*}
+    
+    El resultado final se establece como la restricción intertemporal. 
+\end{enumerate}
+
+\textbf{Ejercicio 16:}
+
+Considere: 
+
+\begin{equation}
+    u(C_{t}) = ln(C_{t}-\overline{c})
+\end{equation}
+
+Donde $\bar{c}>0 .$ El consumidor valora el consumo futuro con un factor de descuento $\beta>0$, y tiene acceso a un mercado crediticio donde puede ahorrar y pedir prestado a la tasa de interés $r$. Las dotaciones de ingreso son $Y_{t}$ y $Y_{t+1}$, y se cumple que $Y_{t}+Y_{t+1} /(1+r)>\bar{c}[1+1 /(1+r)]$.
+
+\begin{enumerate}[a)]
+    \item El parámetro $\bar{c}$ se puede considerar como un consumo de subsistencia. ¿De qué depende entonces esta función de utilidad?
+    
+    La condición nos da una interpretación racional donde vemos que el valor del ingreso intertemporal debe mayor a lo que necesita para sobrevivir. De forma matemática lo podemos ver de la forma, 
+    
+    Noté que si analizamos la función vemos qué:
+    
+    \begin{align*}
+        u(C_{t}) &= ln(C_{t}-\overline{c})\\
+        & \Leftrightarrow C_{t}>\bar{c}
+    \end{align*}
+    
+    \item Plantee el problema del consumidor.
+    
+    Recuerde que tenemos las siguientes restricciones:
+    
+    \begin{equation*}
+        \begin{cases}
+            Y_{t} = C_{t}+S_{t} & (i) \\
+            Y_{t+1} +(1+r)S_{t} = C_{t+1} &(ii)
+        \end{cases}
+    \end{equation*}
+    
+    Entonces nuestro consumidor se enfrenta al siguiente problema
+    
+    \begin{align*}
+        \max_{C_{t}, C_{t+1}, S_{t}} & u(C_{t})+\beta u(C_{t+1})\\
+        s.a. & (i) \textup{ y }(ii) 
+    \end{align*}
+    
+    Podemos entonces hacer el calculo con la restricción intertemporal: 
+    
+    \begin{align*}
+        \max_{C_{t}, C_{t+1}, S_{t}} & u(C_{t})+\beta u(C_{t+1})\\
+        s.a. &  C_{t}+ \frac{ C_{t+1}}{(1+r_{t})} = Y_{t}+\frac{ Y_{t+1}}{(1+r_{t})}  
+    \end{align*}
+    \item Calcule las condiciones de primer orden.
+    
+    Calculamos el Lagrangeano:
+    
+    \begin{equation}
+        \calL = ln(C_{t}-\bar{c}) +\beta ln(C_{t+1}-\bar{c})+\lambda(Y_{t}+\frac{ Y_{t+1}}{(1+r_{t})} - C_{t}- \frac{ C_{t+1}}{(1+r_{t})})
+    \end{equation}
+    
+    \textbf{CPOs:}
+    \begin{align}
+    \frac{\partial \calL}{\partial C_{t}}: & \frac{1}{C_{t}-\bar{c}}-\lambda=0\\
+    \frac{\partial \calL}{\partial C_{t+1}}: & \frac{\beta}{C_{t+1}-\bar{c}}-\frac{\lambda}{(1+r_{t})}=0\\
+    \frac{\partial \calL}{\partial \lambda}: & Y_{t}+\frac{ Y_{t+1}}{(1+r_{t})} - C_{t}- \frac{ C_{t+1}}{(1+r_{t})}=0
+    \end{align}
+    
+    Así considere que considere a (6.30) y (6.31) como la condición de optimalidad. 
+    
+    \begin{equation}
+        \frac{C_{t+1}-\bar{c}}{\beta(C_{t}-\bar{c})} = 1+r_{t}
+    \end{equation}
+    
+\end{enumerate}

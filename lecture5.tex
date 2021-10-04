@@ -151,3 +151,57 @@ Combinando las dos primeras condiciones de primer orden, se tiene la ecuación d
 \end{equation}
 
 Refleja lo que se debe cumplir, la decisión es sopesar qué hacer con la última unidad de ingreso. 
+
+\section{Extensiones}
+
+\subsection{Riqueza}
+
+Iniciamos suponiendo que:
+
+Los consumidores no tienen riqueza y solo hay un activo financiero. Ahora suponemos que los consumidores inician con un acervo de $H_{t-1}$ unidades de riqueza. Casa una se valora en $Q_{t}$
+
+La restricción presupuestaria del consumidor $t$:
+\begin{equation}
+    C_{t}+S_{t}+Q_{t}H_{t}< Y_{t}+ Q_{t}H_{t-1}
+\end{equation}
+
+Alternativamente
+
+\begin{equation}
+    C_{t}+S_{t}+Q_{t}\underbrace{(H_{t}-H_{t-1})}_{\Delta H_{t}} \leq Y_{t}
+\end{equation}
+
+Considere en (5.24) como la decisión de como decir cuanto cambiar la riqueza. Ahora en el segundo periodo se tiene una restricción similar
+
+\begin{equation}
+    C_{t+1}+S_{t+1}+Q_{t+1}\underbrace{(H_{t+1}-H_{t})}_{\Delta H_{t+1}} \leq Y_{t+1}+ (1+r_{t})S_{t}
+\end{equation}
+
+Las condiciones generales son, 
+
+$$S_{t+1}=H_{t+1}=0$$
+
+Por lo que la restricicón intertemporal es: 
+
+\begin{equation}
+    C_{t}+\frac{C_{t+1}}{1+r_{t}} +Q_{t}H_{t} = Y_{t}+\frac{Y_{t+1}}{1+r_{t}}  + \frac{Q_{t}H_{t-1}+Q_{t+1}H_{t}}{1+r_{t}}
+\end{equation}
+
+\begin{itemize}
+    \item No hay incertidumbre
+    \item \textbf{En equilibrio} el rendimiento de $S_{t}$ y $H_{t}$ debe ser el mismo, Para ilustrar lo previo suponga que, El consumidor solo quiere consumidor mañana:
+    $$C_{t}=0$$
+    
+    El consumidor no tiene riqueza en el periodo pasado,
+    
+    $$H_{t-1}=0$$
+    
+    El consumidor no recibe ingreso mañana
+    $$Y_{t-1}=0$$
+    
+    El rendimiento de ahorrar $H_{t}$ es mayor:
+    
+    $$\frac{Q_{t+1}}{Q_{t}} > 1+r_{t}$$
+\end{itemize}
+
+\subsection{Incertidumbre}
