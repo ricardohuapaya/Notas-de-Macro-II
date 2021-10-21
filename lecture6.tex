@@ -1,0 +1,39 @@
+\mainsection{6}{Programación Dinamica}{10/20/2021}
+
+\textbf{El Problema de Generalización de periodos}
+
+Suponga que el hogar vive en el periodo actual, $t$ y $T$ periodos adicionales.
+
+Por lo tanto las $T$ restricciones presupuestarias. Por el momento asuma que que $S_{t+T}=0$ y que las tasas de interés son constantes. Así podemos escribir la restricción presupuestaria intemporal:
+
+\begin{equation}
+    C_{t}+\frac{C_{t+1}}{1+r}+\dots+\frac{C_{t+T}}{(1+r)^{T}}=Y_{t}+\frac{Y_{t+1}}{1+r}+\dots+\frac{Y_{t+T}}{(1+r)^{T}}
+\end{equation}
+
+Alternativamente, 
+
+\begin{equation}
+    \sum_{\tau=0}^{T} \frac{C_{t+\tau}}{(1+r)^{\tau}} =  \sum_{\tau=0}^{T} \frac{Y_{t+\tau}}{(1+r)^{\tau}}
+\end{equation}
+\myequations{Restricción Presupuestaria T Periodos}
+
+Lo que nos dice es que el flujo de ingreso a valor presente debe ser igual al flujo de consumo en valor presente,
+
+Las preferencias toman una forma similar: 
+
+\begin{equation}
+    U(C)=\sum_{\tau =0}^{T}\beta^{\tau}u(C_{t+\tau})
+\end{equation}
+
+Esta función demuestra un \textbf{descuento geométrico.}
+
+\textbf{El problema del hogares}
+
+\begin{align}
+    \max_{\{C_{\tau}, S_{\tau}\}^{T}_{\tau=t}} & \sum_{\tau =0 }^{T}\beta u(C_{t+\tau}) \\
+    \textup{sujeto a }\nonumber \\
+    C_{t}+S_{t}&=Y_{t}\\
+    C_{t}+S_{t}&=Y_{t}+(1+r_{t}) S_{t})\\
+    \dots \nonumber \\
+    C_{t+T}+S_{t+T}&=Y_{t+T}+(1+r_{t+T-1}) S_{t+T-1}
+\end{align}
